@@ -35,7 +35,7 @@
             </li>
             @auth
             <li class="nav-item">
-                <a class="nav-link" href="/yourStories">Your Stories</a>
+                <a class="nav-link" href="/yourStories/{{auth()->user()->id}}">Your Stories</a>
             </li>
             @endauth
             <li class="nav-item">
@@ -45,12 +45,21 @@
         
         <!-- Move the login and register links to the right -->
         <ul class="navbar-nav ml-auto">
+            @auth
+            <li class="nav-item">
+                <form class="nav-link inline" method="POST" action="/logout">
+                    @csrf
+                    <button type="submit" class="btn">Logout <i class="fa-solid fa-door-closed"></i></button>
+                </form>
+            </li>           
+            @else
             <li class="nav-item">
                 <a class="nav-link" href="/login">Login <i class="fa-solid fa-right-to-bracket"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/register">Register <i class="fa-solid fa-user-plus"></i></a>
             </li>
+            @endauth
         </ul>
     </div>
 </nav>

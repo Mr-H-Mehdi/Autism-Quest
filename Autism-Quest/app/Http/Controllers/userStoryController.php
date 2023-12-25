@@ -12,4 +12,12 @@ class userStoryController extends Controller
 
         return view('userStories.index', compact('records'));
     }
+
+    public function show(){
+        $id = auth()->user()->id;
+        $stories = userStory::where('user_id', $id)->paginate(3);
+
+        return view('userStories.show',compact('stories'));
+
+    }
 }

@@ -1,5 +1,5 @@
 
-<footer class="bg-light text-center py-3 sticky-bottom">
+<footer class="bg-light text-center py-3 sticky-bottom fixed-bottom">
     <div class="container">
         <p>&copy; 2023 Autism Quest. All rights reserved.</p>
     </div>
