@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\resourceController;
+use App\Http\Controllers\userStoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//show user stories
+Route::get('/userStories',[userStoryController::class,'index']);
+//show resources
+Route::get('/resources',[resourceController::class,'index']);
