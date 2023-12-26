@@ -37,10 +37,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="/yourStories/{{auth()->user()->id}}">Your Stories</a>
             </li>
-            @endauth
             <li class="nav-item">
                 <a class="nav-link" href="/gameArena">Game Arena</a>
             </li>
+            @endauth
         </ul>
         
         <!-- Move the login and register links to the right -->
