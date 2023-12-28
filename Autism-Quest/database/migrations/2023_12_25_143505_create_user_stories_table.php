@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id'); // This line adds the foreign key
             $table->string('tags');
             $table->string('title');
+            $table->string('image')->nullable();
             $table->text('story');
             $table->timestamps();
 

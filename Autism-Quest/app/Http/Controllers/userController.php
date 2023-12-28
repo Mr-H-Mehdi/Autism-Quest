@@ -25,11 +25,12 @@ class userController extends Controller
 
         //create User
         $user = User::create($formFields);
+        
 
         //login
         auth()->login($user);
 
-        return redirect('/');
+        return redirect('/')->withErrors("not logged in");
 
     }
 

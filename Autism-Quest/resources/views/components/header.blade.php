@@ -13,6 +13,10 @@
             height: 50px; /* Adjust the height as needed */
             width:50px;
         }
+    
+        a {
+            text-decoration: none; /* Remove underline from the link */
+        }
     </style>
 </head>
 <body>
@@ -34,9 +38,15 @@
                 <a class="nav-link" href="/userStories">User Stories</a>
             </li>
             @auth
-            <li class="nav-item">
-                <a class="nav-link" href="/yourStories/{{auth()->user()->id}}">Your Stories</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Your Stories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/userStories/{{auth()->user()->id}}">View Stories</a>
+                  <a class="dropdown-item" href="/userStories/create">Create Stories</a>
+                </div>
+              </li>
             <li class="nav-item">
                 <a class="nav-link" href="/gameArena">Game Arena</a>
             </li>
