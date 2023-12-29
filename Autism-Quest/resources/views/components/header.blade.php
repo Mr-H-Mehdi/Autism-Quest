@@ -18,6 +18,7 @@
             text-decoration: none; /* Remove underline from the link */
         }
     </style>
+    <link href="{{ asset('css/headerFooter.css') }}" rel="stylesheet">
 </head>
 <body>
 

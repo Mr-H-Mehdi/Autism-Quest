@@ -1,6 +1,39 @@
-#sun{
-    z-index: 1000;
+body{
+    margin: 0;
+    padding: 0;
+}
+#section3,#section2,#section1{
+    border-bottom:5px solid white;
+    box-sizing: border-box;
 }
 #section3{
-    background-color: #FFA732;
+    background-color: #CBFFA9;
+}
+#section1{
+    background-color: #9AD0C2;
+}
+#section2{
+    background-color: #FFD9B7;
+}
+#clouds{
+    width: 200px;
+    height: 200px;
+}
+#sun{
+    z-index: 200;
+}
+
+.awareness-image {
+    transition: filter 0.3s ease-in-out;
+    filter: grayscale(100%);
+    border:5px solid white;
+    border-top: 0;
+    border-bottom-right-radius: 50%;
+}
+
+.awareness-image:hover {
+    filter: grayscale(0%);
+}
+h2{
+    font-weight: bold;
 }
