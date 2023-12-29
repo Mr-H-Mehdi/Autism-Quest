@@ -1,5 +1,5 @@
-@extends('layouts.app')
+@extends('layouts.app')  {{-- Assuming you have a layout file --}}
 
 @section('content')
-    <p>Home</p>
+ <h2>HOME</h2>
 @endsection

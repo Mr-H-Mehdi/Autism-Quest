@@ -45,3 +45,7 @@ Route::put('/userStories/update/{id}', [userStoryController::class, 'update']);
 Route::get('/userStories/edit/{id}', [userStoryController::class, 'edit'])->name('edit');
 //Delete story
 Route::delete('/userStories/{id}',[userStoryController::class,'delete']);
+//display awareness page
+Route::get('/awareness', function () {
+    return view('awareness.index');
+});
