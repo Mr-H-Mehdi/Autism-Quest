@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
     <div class="container">
         @if(count($stories) > 0)
             <div class="row">

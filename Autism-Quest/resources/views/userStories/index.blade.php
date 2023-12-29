@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
     <div class="container">
         <div class="row">
             @foreach($records as $record)

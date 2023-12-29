@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
 <div class="container mt-2 mb-2">
     <div class="row justify-content-center">
         <div class="col-md-6 shadow-sm">

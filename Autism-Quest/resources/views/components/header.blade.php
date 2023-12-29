@@ -11,7 +11,7 @@
         /* Custom style to resize the logo in the navbar */
         .navbar-brand img {
             height: 50px; /* Adjust the height as needed */
-            width:50px;
+            width:90px;
         }
     
         a {
