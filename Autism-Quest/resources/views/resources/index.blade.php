@@ -14,7 +14,7 @@
         <div class="row mb-6">
             @foreach($hospitals->take(3) as $hospital)
             <div class="col-md-4 mt-4">
-                    <div class="card mb-4  h-100 bg-light">
+                    <div class="card mb-4  h-100 bg-white">
                         <img src="images/hospital.jpg" class="card-img-top" alt="{{ $hospital->title }}">    
                         <div class="card-body">
                             <h5 class="card-title">{{ $hospital->name }}</h5>
@@ -37,7 +37,7 @@
         <div class="row">
             @foreach($educationalInstitutes->take(3) as $institute)
             <div class="col-md-4 mt-4">
-                    <div class="card mb-4  h-100 bg-light">
+                    <div class="card mb-4  h-100 bg-white">
                         <img src="images/school.jpg" class="card-img-top" alt="{{ $institute->title }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $institute->name }}</h5>

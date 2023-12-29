@@ -2,6 +2,19 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
+<style>
+    footer{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    #test:hover {
+    background-color: #5bc0de;
+    color: white;
+}
+</style>
     <div class="container">
         @if(count($stories) > 0)
             <div class="row">
@@ -29,8 +42,8 @@
                 {{ $stories->links('pagination::bootstrap-4') }}
             </div>
         @else
-        <a href="/userStories/create">
-            <div class="container text-center mt-5 shadow-sm bg-primary rounded p-2 text-light">
+        <a style="text-decoration:none"href="/userStories/create">
+            <div id="test" class="container text-center mt-5 shadow-sm bg-white rounded p-2 text-info border border-info">
                 <h2>No stories found. Post one today!</h2>
             </div>
         </a>

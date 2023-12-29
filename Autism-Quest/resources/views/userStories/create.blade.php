@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
 <div class="container mt-2 mb-2">
     <div class="row justify-content-center">
-        <div class="col-md-6 shadow-sm">
+        <div class="col-md-6 shadow-sm bg-white">
             <h2 class="text-center mb-4">Post a Story!</h2>
             <form action="/userStories/create" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -12,7 +12,7 @@
                     <label for="title">Title:</label>
                     <input type="id" class="form-control" id="title" name="title" required>
                     @error('title')
-                    <p class="text-xs text-danger mt-1">{{$message}}</p>  
+                    <p class="error text-xs text-danger mt-1">{{$message}}</p>  
                     @enderror
                 </div>
         
@@ -21,7 +21,7 @@
                     <label for="tags">Tags:</label>
                     <input type="text" class="form-control" id="tags" name="tags" required>
                     @error('tags')
-                    <p class="text-xs text-danger mt-1">{{$message}}</p>  
+                    <p class="error text-xs text-danger mt-1">{{$message}}</p>  
                     @enderror
                 </div>
 
@@ -36,7 +36,7 @@
                     <label for="story">Story:</label>
                     <textarea class="form-control" id="story" name="story" rows="5" required></textarea>
                     @error('story')
-                    <p class="text-xs text-danger mt-1">{{$message}}</p>  
+                    <p class="error text-xs text-danger mt-1">{{$message}}</p>  
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-primary btn-block mb-4">Post</button>

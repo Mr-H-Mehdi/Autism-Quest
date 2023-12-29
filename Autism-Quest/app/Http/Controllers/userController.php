@@ -30,7 +30,7 @@ class userController extends Controller
         //login
         auth()->login($user);
 
-        return redirect('/')->withErrors("not logged in");
+        return redirect('/');
 
     }
 
@@ -63,7 +63,7 @@ class userController extends Controller
 
             return redirect('/');
         }
-        return back()->withErrors();
+        return back()->withErrors(['email'=> 'Invalid Credentials'])->onlyInput('email');
     }
 
 }

@@ -13,7 +13,7 @@
                     <label for="title">Title:</label>
                     <input type="text" class="form-control" id="title" name="title" value="{{ $story->title }}" required>
                     @error('title')
-                        <p class="text-xs text-danger mt-1">{{ $message }}</p>
+                        <p class="error text-xs text-danger mt-1">{{ $message }}</p>
                     @enderror
                 </div>
         
@@ -22,7 +22,7 @@
                     <label for="tags">Tags:</label>
                     <input type="text" class="form-control" id="tags" name="tags" value="{{ $story->tags }}" required>
                     @error('tags')
-                        <p class="text-xs text-danger mt-1">{{ $message }}</p>
+                        <p class="error text-xs text-danger mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -31,7 +31,7 @@
                     <label for="image" class="inline-block">Photo:</label>
                     <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
                     @error('image')
-                        <p class="text-xs text-danger mt-1">{{ $message }}</p>
+                        <p class="error text-xs text-danger mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 

@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+</style>
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6 shadow-sm">
@@ -11,14 +20,14 @@
                     <label for="email">Email:</label>
                     <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}"  required>
                     @error('email')
-                        <p class="text-xs text-danger mt-1">{{$message}}</p>  
+                        <p class="error text-xs text-danger mt-1">{{$message}}</p>  
                     @enderror
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <input type="password" class="form-control" id="password" name="password" value="{{old('password')}}"  required>
                     @error('password')
-                        <p class="text-xs text-danger mt-1">{{$message}}</p>  
+                        <p class="error text-xs text-danger mt-1">{{$message}}</p>  
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
