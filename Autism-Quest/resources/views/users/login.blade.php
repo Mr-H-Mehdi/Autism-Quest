@@ -9,10 +9,13 @@ footer{
   width: 100%;
   text-align: center;
 }
+body{
+    background-image: linear-gradient(to right, #f9c9e2 , #c9dcf9);
+}
 </style>
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <div class="col-md-6 shadow-sm">
+        <div class="col-md-6 shadow-sm justify-content-center bg-white rounded">
             <h2 class="text-center mb-4">Login</h2>
             <form action="/users/login" method="POST">
                 @csrf
