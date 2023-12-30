@@ -3,8 +3,8 @@
 @section('content')
 <style>
     body{
-        background-color: #FFFFEC;
-    }
+    background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
+}
 </style>
 <div class="container">
     <section class="vh-100">

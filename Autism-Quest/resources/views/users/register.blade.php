@@ -10,9 +10,9 @@
       text-align: center;
     }
     body{
-    background-image: linear-gradient(to right, #f9c9e2 , #c9dcf9);
+    background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
 }
-    </style>
+</style>
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-6 shadow-sm bg-white rounded">
