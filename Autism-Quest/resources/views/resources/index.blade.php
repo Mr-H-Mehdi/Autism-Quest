@@ -8,8 +8,8 @@
 </style>
 <div class="container">
     <section class="vh-100">
-        <div style="width:100%; height:70px; background-color:#9AD0C2" class="mt-4 rounded text-center text-light mx-auto my-auto">
-            <h2>Hospitals</h2>
+        <div style="width:100%; height:70px; background-color:#9AD0C2" class="mt-4 rounded text-center text-dark mx-auto border border-dark">
+            <h2 class="mt-3">Hospitals</h2>
         </div>    
         <div class="row mb-6">
             @foreach($hospitals->take(3) as $hospital)
@@ -31,8 +31,8 @@
     </section>
 
     <section class="vh-100">
-        <div style="width:100%; height:70px; background-color:#9AD0C2" class="mt-4 rounded text-center text-light mx-auto my-auto">
-            <h2>educational Institutes</h2>
+        <div style="width:100%; height:70px; background-color:#9AD0C2" class="mt-4 rounded text-center text-dark mx-auto border border-dark">
+            <h2 class="mt-3">educational Institutes</h2>
         </div>  
         <div class="row">
             @foreach($educationalInstitutes->take(3) as $institute)
