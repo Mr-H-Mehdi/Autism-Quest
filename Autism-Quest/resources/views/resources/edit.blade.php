@@ -1,9 +1,13 @@
 @extends('layouts.app')
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
+<style>
+    body{
+    background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
+}
+</style>
 <div class="container mt-2 mb-2">
     <div class="row justify-content-center">
-        <div class="col-md-6 shadow-sm bg-white">
+        <div class="col-md-8 shadow-sm bg-white">
             <h2 class="text-center mb-4">Edit Resource</h2>
             <form action="/resources/update/{{$resource->id}}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -30,7 +34,7 @@
         
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <input type="text" class="form-control" id="description" name="description" value="{{ $resource->description }}" required>
+                    <textarea type="text" class="form-control" id="description" name="description" value="{{ $resource->description }}" required></textarea>
                     @error('description')
                         <p class="error text-xs text-danger mt-1">{{ $message }}</p>
                     @enderror

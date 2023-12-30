@@ -17,7 +17,10 @@ use App\Http\Controllers\userStoryController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('website.index');
+});
+Route::get('/aboutUs', function () {
+    return view('website.about');
 });
 //save created story 
 Route::post('/userStories/create',[userStoryController::class,'store']);

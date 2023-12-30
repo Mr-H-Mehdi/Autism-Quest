@@ -2,13 +2,6 @@
 
 @section('content')
 <style>
-footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
     body{
     background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
 }
