@@ -62,7 +62,7 @@ class userStoryController extends Controller
             'title' => 'required',
             'tags' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'story' => 'required',
+            'story' => 'required|max:100',
         ]);
 
         $story = userStory::find($id);

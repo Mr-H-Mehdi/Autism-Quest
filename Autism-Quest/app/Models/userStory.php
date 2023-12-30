@@ -14,6 +14,5 @@ class userStory extends Model
         'user_id',
         'tags',
         'story',
-        'image'
     ];
 }

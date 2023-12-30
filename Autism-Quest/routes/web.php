@@ -31,6 +31,16 @@ Route::get('/userStories',[userStoryController::class,'index']);
 Route::get('/resources',[resourceController::class,'index']);
 //update resources
 Route::get('/resources/show',[resourceController::class,'show']);
+//show create form for resources
+Route::get('/resources/create',[resourceController::class,'create']);
+//save created resource
+Route::post('/resources/create',[resourceController::class,'store']);
+//update resource
+Route::put('/resources/update/{id}', [resourceController::class, 'update']);
+//show edit Story form
+Route::get('/resources/edit/{id}', [resourceController::class, 'edit']);
+//Delete story
+Route::delete('/resources/delete/{id}',[resourceController::class,'delete']);
 //create user
 Route::post('/users',[userController::class,'store']);
 //show user specific stories
@@ -51,6 +61,7 @@ Route::delete('/userStories/{id}',[userStoryController::class,'delete']);
 Route::get('/awareness', function () {
     return view('awareness.index');
 });
+//display games arena
 Route::get('/arena', function () {
     return view('games.arena');
 });

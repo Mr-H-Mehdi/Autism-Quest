@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('description');
+            $table->string('image')->nullable();
             $table->string('location');
+            $table->string('contact');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
