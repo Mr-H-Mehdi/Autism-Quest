@@ -1,0 +1,108 @@
+body {
+    font-family: hero-new, Century Gothic, Helvetica, Arial, sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+}
+
+.maindiv {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gamediv {
+    flex: 1;
+    border: solid #74536f 10px;
+    background-color: yellow;
+    width: 20%;
+    margin: 10% 10% 10% 10%;
+}
+
+/* Media query for screens narrower than a certain width */
+@media (max-width: 700px) {
+    .maindiv {
+        flex-direction: column;
+    }
+    #main-page{
+        background-size: 100% ;
+    }
+
+    .gamediv {
+        width: 80%; /* Adjust the width for smaller screens */
+        margin: 5% 5% 5% 5%; /* Adjust the margin for smaller screens */
+    }
+}
+
+@media (min-width: 200px) {
+    /* Media query for smaller screens */
+    .gamediv {
+        width: calc(100% - 20px); /* Full width for one item with 10px margin */
+        margin-right: 0;
+    }
+}
+        /* .mainpagedivs{
+            width: 20%;
+            height: 200px;
+            border: solid #74536f 10px;
+            float: left;
+            margin-left:5%;
+            border-radius: 6px;
+            box-sizing: border-box;
+            margin-top: 250px;
+        }
+        */
+        button{
+            width:160px;
+            height: 60px;
+            margin:10px 10px 10px 10px;
+            border-radius: 20px;
+            background-color: #766996;
+            border: solid #f99a5a 5px;
+            box-sizing: border-box;
+            font-family:hero-new,Century Gothic,Helvetica,Arial,sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        }
+        button:hover {
+            box-shadow: 0 5px 10px rgba(26, 54, 67, 0.2);
+        }
+        #main-page{
+            width: 100%;
+            height: 1000px;
+            background-image: url(../../Images1/space.jpg);
+            background-size: cover;
+            border: solid #50394c 10px;
+            border-bottom: none;
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        }
+        a{
+            color:white;
+            font-size: 20px;
+            font-weight: 550;
+            text-decoration: none;
+        }
+        #button-nav{
+            margin-top:10px;
+            margin-left:10px;
+            margin-right:0px;
+            height:50px;
+        }
+        #game-img{
+            width: 100%;
+            height: 100%;
+        }
+

@@ -1,0 +1,17 @@
+#doodle-img{
+    width:730px;
+    height: 380px;
+    border-radius: 15px;
+}
+.doodles{
+    width:750px;
+    height: 400px;
+    margin-top: 20px;
+    border: solid black 10px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+#colors:hover{
+    border-color: rgb(255, 170, 0);
+    box-shadow: 0 0 10px 0 rgb(255, 170, 0);
+}

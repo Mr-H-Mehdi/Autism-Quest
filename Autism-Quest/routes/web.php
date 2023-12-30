@@ -49,3 +49,6 @@ Route::delete('/userStories/{id}',[userStoryController::class,'delete']);
 Route::get('/awareness', function () {
     return view('awareness.index');
 });
+Route::get('/arena', function () {
+    return view('games.arena');
+});
