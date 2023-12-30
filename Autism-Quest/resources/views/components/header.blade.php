@@ -38,6 +38,7 @@
                 <a class="nav-link" href="/userStories">User Stories</a>
             </li>
             @auth
+            @if (auth()->user()->role === 'user')
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Your Stories
@@ -50,10 +51,25 @@
             <li class="nav-item">
                 <a class="nav-link" href="/gameArena">Game Arena</a>
             </li>
+            @endif
+            @endauth
+            @auth
+            @if (auth()->user()->role === 'admin')
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Update Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/resources/show">View Resources</a>
+                  <a class="dropdown-item" href="/resources/create">Create Resources</a>
+                </div>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/gameArena">Game Arena</a>
+            </li>
+            @endif
             @endauth
         </ul>
-        
-        <!-- Move the login and register links to the right -->
         <ul class="navbar-nav ml-auto">
             @auth
             <li class="nav-item">

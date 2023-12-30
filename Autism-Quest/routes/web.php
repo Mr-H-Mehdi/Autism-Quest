@@ -29,6 +29,8 @@ Route::get('/register',[userController::class,'create']);
 Route::get('/userStories',[userStoryController::class,'index']);
 //show resources
 Route::get('/resources',[resourceController::class,'index']);
+//update resources
+Route::get('/resources/show',[resourceController::class,'show']);
 //create user
 Route::post('/users',[userController::class,'store']);
 //show user specific stories

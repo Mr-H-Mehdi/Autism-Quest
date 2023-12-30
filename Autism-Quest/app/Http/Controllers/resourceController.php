@@ -13,4 +13,11 @@ class resourceController extends Controller
 
     return view('resources.index', compact('hospitals', 'educationalInstitutes'));
     }
+
+    public function show(){
+        $hospitals = Resource::where('type', 'HOSPITAL')->paginate(3);
+        $educationalInstitutes = Resource::where('type', 'EDUCATIONAL_INSTITUTE')->paginate(3);
+
+    return view('resources.show', compact('hospitals', 'educationalInstitutes'));
+    }
 }
