@@ -2,28 +2,41 @@
 
 @section('content')
 <style>
-    /* body{
-    background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
-} */
+     body{
+        background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
+     }
 </style>
-
-    <section id="main-page">
-        <div class="maindiv">
-            <div class="gamediv">
-                <div class="mainpagedivs"><img  id="game-img" src="{{asset('images1/MathMania1.png')}}" alt="game image"><button><a href="{{asset('games/math mania/mathmania.html')}}">Math Mania</a></button></div>
-                
-            </div>
-            <div class="gamediv">
-                <div class="mainpagedivs"><img  id="game-img" src="{{asset('images1/galaxy.png')}}" alt="game image"><button><a href="{{asset('games/bubble pop/bubblepop.html')}}">Bubble Pop</a></button></div>
-
-            </div>
-            <div class="gamediv">
-                <div class="mainpagedivs"><img  id="game-img" src="{{asset('images1/EmoExplosion.png')}}" alt="game image"><button><a href="{{asset('games/num bubble/index.html')}}">Num Bubble</a></button></div>
-
+<section id="main-page" class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 d-flex flex-column">
+                <img class="card-img-top" src="{{ asset('gameImages/MathMania.png') }}" alt="Math Mania">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Math Mania</h5>
+                    <a href="{{ asset('games/math mania/mathmania.html') }}" class="btn btn-primary mt-auto">Play</a>
+                </div>
             </div>
         </div>
-    </section>
-    
-    <link href="{{ asset('css/gamestyles/styles.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/gamestyles/styles.css') }}" rel="stylesheet">
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 d-flex flex-column">
+                <img class="card-img-top" src="{{ asset('gameImages/bubblePop.png') }}" alt="Bubble Pop">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Bubble Pop</h5>
+                    <a href="{{ asset('games/bubble pop/bubblepop.html') }}" class="btn btn-primary mt-auto">Play</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 d-flex flex-column">
+                <img class="card-img-top" src="{{ asset('gameImages/numBubble.png') }}" alt="Num Bubble">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Num Bubble</h5>
+                    <a href="{{ asset('games/num bubble/index.html') }}" class="btn btn-primary mt-auto">Play</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

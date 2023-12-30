@@ -37,9 +37,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="/userStories">User Stories</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/arena">Games</a>
-            </li>
             @auth
             @if (auth()->user()->role === 'user')
             <li class="nav-item dropdown">
@@ -52,7 +49,7 @@
                 </div>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href="/gameArena">Game Arena</a>
+                <a class="nav-link" href="/arena">Game Arena</a>
             </li>
             @endif
             @endauth
@@ -67,9 +64,6 @@
                   <a class="dropdown-item" href="/resources/create">Create Resources</a>
                 </div>
               </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/gameArena">Game Arena</a>
-            </li>
             @endif
             @endauth
         </ul>
