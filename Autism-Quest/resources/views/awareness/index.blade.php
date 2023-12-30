@@ -1,10 +1,17 @@
-@extends('layouts.app') {{-- Assuming you have a layout file --}}
+@extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid">
-        <section class="row my-0 vh-100 text-dark mb-0" id="section1">
-            <div class="col-md-7 h-100">
+<style>
+    body{
+    background-image: linear-gradient(to right, #fafab5 , #c9dcf9);
+}
+</style>
+    <div class="container">
+        <section class="row my-0 text-dark mb-0 shadow" id="section1">
+            <div class="col-md-7">
                 <img src="{{ asset('images/awareness1.jpg') }}" class="img-fluid awareness-image" alt="Image">
+                <h2 class="display-4">Categorization</h2>
+                <p class="lead">Categorization of Autism Spectrum Disorder (ASD) involves recognizing a spectrum of symptoms and behaviors that vary in severity and presentation. Historically, classifications like classic autism, Asperger's Syndrome, and PDD-NOS were used, but contemporary approaches, such as the DSM-5, adopt a more comprehensive perspective. These classifications aim to capture the diverse nature of ASD, emphasizing individual differences. While specific categories have evolved, the focus remains on understanding the unique characteristics of each person with autism, promoting inclusivity, and tailoring interventions to address their specific needs.</p>
             </div>
             <div class="col-md-5">
                 <h2 class="display-4">What is Autism?</h2>
@@ -14,7 +21,8 @@
                 </div>
             </div>
         </section>
-        <section class="row my-0 text-dark mb-0" id="section2">
+
+        <section class="row my-0 text-dark mb-0  shadow" id="section2">
             <div class="col-md-5">
                  <div class="doodle-container mt-0" id="clouds">
                     <img src="{{ asset('images/doodle1.png') }}" class="img-fluid" alt="Doodle">
@@ -25,7 +33,17 @@
             <div class="col-md-7">
                 <img src="{{ asset('images/awareness3.jpg') }}" class="img-fluid awareness-image" alt="Image">
                 <div class="row mt-0" id="ques">
-                    <div class="col-2">
+                    <div class="row mt-0" id="ques">
+                        <div class="col-2">
+                                <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
+                        </div>
+                        <div class="col-2">
+                            <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
+                        </div>
+                        <div class="col-2">
+                        <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
+                        </div>
+                        <div class="col-2">
                             <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
                     </div>
                     <div class="col-2">
@@ -34,21 +52,16 @@
                     <div class="col-2">
                     <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
                     </div>
-                    <div class="col-2">
-                        <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
-                </div>
-                <div class="col-2">
-                    <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
-                </div>
-                <div class="col-2">
-                <img src="{{ asset('images/questionMark.png') }}" class="img-fluid" alt="Doodle">
-                </div>
                 </div>                
             </div>
         </section>
-        <section class="row my-0 vh-100 text-dark mb-0" id="section3">
-            <div class="col-md-7 h-100">
+
+        <section class="row my-0 text-dark mb-0  shadow" id="section3">
+            <div class="col-md-7">
                 <img src="{{ asset('images/awareness2.jpg') }}" class="img-fluid awareness-image" alt="Image">
+                <h2 class="display-4">Fun Fact</h2>
+                <p class="lead">A fascinating and positive aspect about autism is the heightened sensory perception that some individuals with autism may possess. While sensory sensitivities are common in autism, some individuals experience heightened abilities in certain senses, such as hearing, sight, or touch. This can lead to unique talents and skills, such as an exceptional ability to notice details or an extraordinary sense of pitch. This phenomenon highlights the diversity of experiences within the autism spectrum and underscores the importance of embracing and celebrating the unique strengths and talents of individuals with autism.</p>
+                
             </div>
             <div class="col-md-5">
                 <h2 class="display-4">Causes and Factors</h2>
