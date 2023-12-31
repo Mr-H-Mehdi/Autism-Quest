@@ -7,11 +7,19 @@ use Illuminate\Http\Request;
 
 class resourceController extends Controller
 {
-    public function index(){
-        $hospitals = Resource::where('type', 'HOSPITAL')->paginate(3);
+    public function showSchools(){
         $educationalInstitutes = Resource::where('type', 'EDUCATIONAL_INSTITUTE')->paginate(3);
 
-    return view('resources.index', compact('hospitals', 'educationalInstitutes'));
+    return view('resources.showSchools', compact('educationalInstitutes'));
+    }
+    public function showHospitals(){
+        $hospitals = Resource::where('type', 'HOSPITAL')->paginate(3);
+
+    return view('resources.showHospitals', compact('hospitals'));
+    }
+
+    public function index(){
+        return view('resources.index');
     }
 
     public function show(){
