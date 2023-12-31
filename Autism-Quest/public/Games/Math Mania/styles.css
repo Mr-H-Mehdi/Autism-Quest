@@ -75,6 +75,8 @@
         }
         #main-page{
             width: 100%;
+            position: fixed;
+            top: 30;
             height: 750px;
             background-image: url(Images/space.jpg);
             background-size: cover;

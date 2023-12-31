@@ -7,15 +7,18 @@
   .planets {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 100px;
     align-content: center;
+    justify-content: center;
   }
   .p-container, #colors,#faces{
+    min-width: 120px;
     background-color: white;
     width:20%;
     height: 20%;
-    margin-left:30px;
+    /* margin-left:5px; */
     box-sizing: border-box;
     align-items: center;
     align-content: center;
@@ -40,16 +43,21 @@
     border: solid #667292 8px;
     border-radius: 50%;
   }
+
   .p-imgs {
     width: 90%;
     height: 90%;
+    aspect-ratio: 1/1;
     margin: 10px;
     border-radius: 50%;
   }
   .r-imgs{
-    width: 90%;
-    height: 90%;
-    margin: 10px;
+    width: 10vw;
+
+    max-width: 75px;
+    min-height: 200px;
+    max-height: 200px;
+    margin: 0;
     border-radius: 50%;
   }
   .p-container:hover {
