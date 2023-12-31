@@ -10,6 +10,14 @@ let gameOver = false;
 let shadow = document.querySelector('.shadow');
 let startBtn = document.querySelector('.start-btn');
 
+
+
+const openArena=()=>{
+    // document.getElementById("scoref").placeholder-=0
+    var arenaRoute = "/arena";
+    window.location.href = arenaRoute;
+}
+
 function createBubble() {
     let div = document.createElement('div');
     let rand = Math.floor(Math.random() * bubbles.length);
