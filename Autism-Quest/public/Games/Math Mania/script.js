@@ -4,6 +4,14 @@ const incScore=()=>{
     score+=10
     document.getElementById("scoref").placeholder=score
 }
+const openArena=()=>{
+    // document.getElementById("scoref").placeholder-=0
+    var arenaRoute = "/arena";
+    window.location.href = arenaRoute;
+}
+
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
