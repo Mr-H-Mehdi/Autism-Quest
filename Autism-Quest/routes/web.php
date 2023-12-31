@@ -30,6 +30,10 @@ Route::get('/userStories/create',[userStoryController::class,'create']);
 Route::get('/register',[userController::class,'create']);
 //show user stories
 Route::get('/userStories',[userStoryController::class,'index']);
+//show hospitals
+Route::get('/resources/hospitals',[resourceController::class,'showHospitals']);
+//show schools
+Route::get('/resources/education',[resourceController::class,'showSchools']);
 //show resources
 Route::get('/resources',[resourceController::class,'index']);
 //update resources

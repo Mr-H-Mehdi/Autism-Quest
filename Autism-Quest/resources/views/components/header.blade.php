@@ -31,9 +31,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="/awareness">Awareness</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/resources">Resources</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/resources/hospitals">Healthcare</a>
+                  <a class="dropdown-item" href="/resources/education">Education</a>
+                </div>
+              </li>
             <li class="nav-item">
                 <a class="nav-link" href="/userStories">User Stories</a>
             </li>
