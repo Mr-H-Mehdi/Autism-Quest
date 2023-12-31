@@ -60,6 +60,12 @@ class resourceController extends Controller
         return view('resources.edit',compact('resource'));
     }
 
+    public function view($id){
+        $resource = Resource::find($id);
+
+        return view('resources.view',compact('resource'));
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

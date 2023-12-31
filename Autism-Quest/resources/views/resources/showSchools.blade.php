@@ -22,6 +22,9 @@
                             <p class="card-text">{{ $institute->description }}</p>
                             <p class="card-text"><strong>Location:</strong> {{ $institute->location }}</p>
                         </div>
+                        <div class="card-footer text-center" style="display: flex; justify-content: center;">
+                            <a href="/resources/view/{{$institute->id}}" class="btn btn-secondary mx-2">View Details <i class="fa-solid fa-eye"></i></a>
+                        </div>    
                     </div>
             </div>
             @endforeach

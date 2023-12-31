@@ -38,6 +38,8 @@ Route::get('/resources/education',[resourceController::class,'showSchools']);
 Route::get('/resources',[resourceController::class,'index']);
 //update resources
 Route::get('/resources/show',[resourceController::class,'show']);
+//view individual resource
+Route::get('/resources/view/{id}',[resourceController::class,'view']);
 //show create form for resources
 Route::get('/resources/create',[resourceController::class,'create']);
 //save created resource
