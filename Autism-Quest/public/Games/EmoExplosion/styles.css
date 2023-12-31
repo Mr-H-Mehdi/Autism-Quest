@@ -2,6 +2,7 @@ body{
     font-family:hero-new,Century Gothic,Helvetica,Arial,sans-serif,-apple-system,BlinkMacSystemFont,Segoe UI,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     margin: 0;
     padding: 0;
+    color: rgb(131, 58, 128);
     align-items: center;
     width:100%;
 }
