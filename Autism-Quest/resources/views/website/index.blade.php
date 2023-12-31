@@ -93,7 +93,7 @@
             <span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
     </div>
 </section>
-<section class="border-0" id="awareness">
+<section class="border border-success" id="awareness">
     <div class="row">
         <div class="col-6 m-0 p-0 position-relative" style="height: 100vh; background-image: url('{{ asset('images/awarenessHome.jpg') }}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
             <div class="text-left text-white" style="margin-top: 30%; margin-left:10%">
@@ -115,7 +115,7 @@
     </div>
 </section>
 
-<section class="border-0 p-1 mt-4" id="awareness">
+<section class="border border-info mt-4" id="awareness">
     <div class="row">
         <div class="col-6 m-0 p-0" style="height: 100vh">
                 <div class="text-left text-info" style="margin-top:5%;margin-left:5%;  margin-right:5%">
@@ -126,7 +126,7 @@
                 <img class="d-block w-100" style="width:30%;height:60%;border-bottom-right-radius:50%;border-top-left-radius:50%;border:2px solid lightblue;" alt="rainbow"
                      src="{{ asset('images/homeGames.jpg') }}" />
         </div>
-        <div class="col-6 p-0 mb-2 position-relative" style="height: 100vh; background-image: url('{{ asset('images/homeUserStories.jpg') }}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+        <div class="col-6 p-0 m-0 position-relative" style="height: 100vh; background-image: url('{{ asset('images/homeUserStories.jpg') }}'); background-repeat: no-repeat; background-size: cover; background-position: center;">
             <div class="text-left text-light" style="margin-top: 50%; margin-left:10%">
                 <h1 class="text-left">Connect with the Community</h1>
                 <h6>There are many ways to get involved in the Autism community. Whether it’s supporting a crucial initiative, attending an event, becoming an Autism Society member, or making a donation, the Autism Society is your connection to making a difference.</h6>

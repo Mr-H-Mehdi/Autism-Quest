@@ -30,6 +30,6 @@ class AuthenticateGames
                 }
 
         // Allow access to other URLs
-        // return $next($request);
+        return $next($request);
     }
 }
