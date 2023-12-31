@@ -8,8 +8,7 @@ Autism Quest is a web application designed to provide a comprehensive platform f
 3. [How to Run the Project](#how-to-run-the-project)
 4. [Features](#features)
 5. [Design](#design)
-6. [Limitations and Future Enhancements](#limitations-and-future-enhancements)
-7. [Conclusion](#conclusion)
+6. [Conclusion](#conclusion)
 
 ## Problem Analysis
 
@@ -108,18 +107,19 @@ Visit `http://localhost:8000` in your browser to explore Autism Quest.
 #### 3.2.1 Programming Languages and Frameworks Used
 - HTML: Hypertext Markup Language
 - CSS: Cascading Style Sheets
+- JS: Javascript
+- PHP
+- Laravel: PHP framework
+- React: Javascript Frontend Library
 
 #### 3.2.2 Web Engineering Techniques Used
 - Accessibility: Proper image alt text and contrasting colors for enhanced accessibility.
 - HTML Structure: Semantic HTML elements for meaningful content structure.
 - Meta Tags: Ensured proper character encoding and viewport settings.
 - Responsive Web Design: Ongoing efforts to improve responsiveness.
+- Routes, Middlewares
 
-## Limitations and Future Enhancements
 
-- The design is not fully responsive and has browser compatibility issues.
-- Design improvements are needed for a better user experience.
-- Consideration for a new feature: a page providing details on accessing medicines used for various autism treatments in Pakistan.
 
 ## Conclusion
 
