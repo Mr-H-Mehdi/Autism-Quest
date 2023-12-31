@@ -30,10 +30,10 @@
         
         <div class="col-md-4 mb-4">
             <div class="card h-100 d-flex flex-column">
-                <img class="card-img-top" src="{{ asset('gameImages/numBubble.png') }}" alt="Num Bubble">
+                <img class="card-img-top" src="{{ asset('gameImages/EmoExplosion.png') }}" alt="Num Bubble">
                 <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Num Bubble</h5>
-                    <a href="{{ asset('games/num bubble/index.html') }}" class="btn btn-primary mt-auto">Play</a>
+                    <h5 class="card-title">Emo Explosion</h5>
+                    <a href="{{ asset('games/EmoExplosion/emoexplosion.html') }}" class="btn btn-primary mt-auto">Play</a>
                 </div>
             </div>
         </div>
