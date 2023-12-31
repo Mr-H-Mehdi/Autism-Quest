@@ -121,7 +121,7 @@
                 <div class="text-left text-info" style="margin-top:5%;margin-left:5%;  margin-right:5%">
                     <h1 class="text-left">Games Arena</h1>
                     <h6>Delve in the world of games, learn as you play and have fun. Register Now!</h6>
-                    <a href="/register"><button class="btn btn-outline-info"><h4>Learn More</h4></button></a>
+                    <a href="/arena"><button class="btn btn-outline-info"><h4>Learn More</h4></button></a>
                 </div>
                 <img class="d-block w-100" style="width:30%;height:60%;border-bottom-right-radius:50%;border-top-left-radius:50%;border:2px solid lightblue;" alt="rainbow"
                      src="{{ asset('images/homeGames.jpg') }}" />
