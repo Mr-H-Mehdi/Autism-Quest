@@ -51,7 +51,7 @@ Route::get('/userStories/{id}',[userStoryController::class,'show']);
 //log out user
 Route::post('/logout',[userController::class,'logout']);
 //show login
-Route::get('/login',[userController::class,'login']);
+Route::get('/login',[userController::class,'login'])->name('login');
 //login
 Route::post('/users/login',[userController::class,'authenticate']);
 //update story
@@ -64,7 +64,23 @@ Route::delete('/userStories/{id}',[userStoryController::class,'delete']);
 Route::get('/awareness', function () {
     return view('awareness.index');
 });
-//display games arena
-Route::get('/arena', function () {
-    return view('games.arena');
+
+
+
+Route::middleware(['web', 'auth', 'web_games'])->group(function () {
+    // Define your games route(s) here
+    Route::get('/arena',function () {
+        return view('games.arena'); 
+        }
+    );
+
+    Route::get('/games/{any}', function () {
+        return view('games.arena');
+    });
+    // Add more routes as needed
 });
+
+// Add a catch-all route for anything under "games"
+Route::any('games/{any}', function () {
+    abort(404); // You can customize this to handle the error as needed
+})->where('any', '.*');
