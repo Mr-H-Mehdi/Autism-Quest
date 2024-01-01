@@ -42,10 +42,6 @@ class userStoryController extends Controller
         $userStory = UserStory::create($formFields);
 
         $id = auth()->user()->id;
-<<<<<<< HEAD
-        
-=======
->>>>>>> 1c83a003a3124e2acadb8022ee4aeff80c00416d
         return redirect("/userStories/{$id}");
     }
 
