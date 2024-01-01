@@ -56,7 +56,6 @@ class userStoryController extends Controller
         $request->validate([
             'title' => 'required',
             'tags' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'story' => 'required|max:100',
         ]);
 

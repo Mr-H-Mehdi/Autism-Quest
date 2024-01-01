@@ -7,7 +7,7 @@
             @foreach($records as $record)
                 <div class="col-md-4 mb-4 mt-4">
                     <div class="card h-100">
-                        <img src="{{$record->image ? asset('storage/'.$record->image):asset('/images/userStory.jpg')}}" class="card-img-left" alt="{{ $record->title }}">
+                        <img src="{{$record->image ? asset('storage/'.$record->image):asset('/images/userStory.jpg')}}" class="card-img-left vh-50" alt="{{ $record->title }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $record->title }}</h5>
                             <p class="card-text">{{ $record->story }}</p>

@@ -35,7 +35,7 @@ Route::get('/resources/hospitals',[resourceController::class,'showHospitals']);
 //show schools
 Route::get('/resources/education',[resourceController::class,'showSchools']);
 //show resources
-Route::get('/resources',[resourceController::class,'index']);
+Route::get('/resources',[resourceController::class,'show']);
 //update resources
 Route::get('/resources/show',[resourceController::class,'show']);
 //view individual resource
