@@ -41,10 +41,6 @@ class userStoryController extends Controller
         $userStory = UserStory::create($formFields);
 
         $id = auth()->user()->id;
-
-        // if($request->hasFile('image')){
-        //     $formFields['image'] = $request->file('image')->store('userStoryImages','public');
-        // }
         
         return redirect("/userStories/{$id}");
 

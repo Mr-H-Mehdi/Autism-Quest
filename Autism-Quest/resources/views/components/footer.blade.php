@@ -25,7 +25,7 @@
                     United States
                 </p>
                 <p>
-                    <b>Phone:</b> (555) 123-4567<br/>
+                    <b>Phone:</b> (051) 123-4567<br/>
                     <b>Email:</b> info@autismquest.com<br>
                     <b>Social Media:</b>
                 </p>

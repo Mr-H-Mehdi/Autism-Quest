@@ -34,7 +34,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-center mt-4">
-            {{ $hospitals->links('pagination::bootstrap-4') }} <!-- Bootstrap pagination links for educational institutes -->
+            {{ $hospitals->links('pagination::bootstrap-4') }} <!-- Bootstrap pagination links for hospitals -->
         </div>
     </section>
 
