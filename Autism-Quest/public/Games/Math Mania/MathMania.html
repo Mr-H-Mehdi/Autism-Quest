@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Document title -->
     <title>Autism Quest</title>
+    
+    <!-- Link to stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="stylesMM.css"> 
 
+    <!-- Favicon -->
     <link rel="shortcut icon" href="https://img.icons8.com/ios-glyphs/30/40C057/bubble.png" type="image/x-icon">
+    
+    <!-- External scripts for React and Babel -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+    <!-- Header section with navigation and score display -->
     <header>
         <nav>
+            <!-- Back button with inline styling and onclick event -->
             <button id="button-nav" style="float:left; color:rgb(207, 231, 146);" onclick="openArena()"><strong>
                 Back
-            </strong>
-        </button>
+            </strong></button>
+            
+            <!-- Label to display the score -->
             <label id="score">Score:<input class="score" type="text" id="scoref" placeholder="0"></label>
-
         </nav>
     </header>
 
+    <!-- Main section with background image -->
     <section id="main-page" style="background-image: url(Images/mmspace.jpg); ">
     </section>
 
+    <!-- Include the JavaScript file with Babel type -->
     <script src="script.js" type="text/babel"></script>
 </body>
 </html>

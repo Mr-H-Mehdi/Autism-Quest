@@ -1,20 +1,26 @@
-var score=0
-const incScore=()=>{
-    // document.getElementById("scoref").placeholder-=0
-    score+=10
-    document.getElementById("scoref").placeholder=score
-}
-const openArena=()=>{
-    // document.getElementById("scoref").placeholder-=0
+// Initialize score
+var score = 0;
+
+// Function to increase the score
+const incScore = () => {
+    // Increment the score by 10
+    score += 10;
+    // Update the placeholder of the score input field
+    document.getElementById("scoref").placeholder = score;
+};
+
+// Function to open the game arena
+const openArena = () => {
+    // Redirect to the "/arena" route
     var arenaRoute = "/arena";
     window.location.href = arenaRoute;
-}
+};
 
-
-
+// Class component representing the main application
 class App extends React.Component {
   constructor(props) {
     super(props);
+    // Initialize state with selectedRocket, selectedPlanet, and score
     this.state = {
       selectedRocket: null,
       selectedPlanet: null,
@@ -22,37 +28,43 @@ class App extends React.Component {
     };
   }
 
+  // Handler for rocket click events
   handleRocketClick = (rocketId) => {
     // Check if a rocket is already selected
     console.log(rocketId);
     if (this.state.selectedRocket !== null) {
+      // Alert the user that only one rocket can be chosen
       alert("You can only choose one rocket!");
       return;
     }
-    document.getElementById(rocketId).style.border="11px solid purple";
-
-    // Set the selected rocket
+    // Apply border styling to the selected rocket
+    document.getElementById(rocketId).style.border = "11px solid purple";
+    // Set the selected rocket in the state
     this.setState({ selectedRocket: rocketId });
   };
 
+  // Handler for planet click events
   handlePlanetClick = (planetId) => {
     // Check if a rocket is selected
     if (this.state.selectedRocket === null) {
+      // Alert the user to choose a rocket first
       alert("Please choose a rocket first!");
       return;
     }
 
     // Check if the selected rocket matches the planet
     if (`r${planetId.charAt(1)}` === this.state.selectedRocket) {
+      // Alert success and update UI
       alert("Success! Rocket landed on the planet!");
-      document.getElementById(this.state.selectedRocket).style.border="";
-      this.setState({ selectedRocket: null })
-      incScore()
+      document.getElementById(this.state.selectedRocket).style.border = "";
+      this.setState({ selectedRocket: null });
+      // Increment the score
+      incScore();
     } else {
+      // Alert failure and update UI
       alert("Oops! Rockets and planets do not match.");
-      document.getElementById(this.state.selectedRocket).style.border="";
-      this.setState({ selectedRocket: null })
-
+      document.getElementById(this.state.selectedRocket).style.border = "";
+      this.setState({ selectedRocket: null });
     }
 
     // Reset the selected rocket and planet
@@ -61,28 +73,36 @@ class App extends React.Component {
 
   render() {
     return (
+      // Main container div
       <div className="container">
+        {/* Planets section */}
         <div className="planets">
+          {/* Individual planet containers with click handlers */}
           <div className="p-container" id="p1" onClick={() => this.handlePlanetClick("p5")}>
-            <img className= "p-imgs" id="p-img1" src="Images/p1.png" alt="Planet 1" />
+            <img className="p-imgs" id="p-img1" src="Images/p1.png" alt="Planet 1" />
           </div>
           <div className="p-container" id="p2" onClick={() => this.handlePlanetClick("p3")}>
-            <img className= "p-imgs" id="p-img2" src="Images/p2.png" alt="Planet 2" />
+            <img className="p-imgs" id="p-img2" src="Images/p2.png" alt="Planet 2" />
           </div>
           <div className="p-container" id="p3" onClick={() => this.handlePlanetClick("p1")}>
-            <img className= "p-imgs" id="p-img3" src="Images/p3.png" alt="Planet 3" />
+            <img className="p-imgs" id="p-img3" src="Images/p3.png" alt="Planet 3" />
           </div>
           <div className="p-container" id="p4" onClick={() => this.handlePlanetClick("p2")}>
-            <img className= "p-imgs" id="p-img4" src="Images/p4.png" alt="Planet 4" />
+            <img className="p-imgs" id="p-img4" src="Images/p4.png" alt="Planet 4" />
           </div>
           <div className="p-container" id="p5" onClick={() => this.handlePlanetClick("p4")}>
-            <img className= "p-imgs" id="p-img5" src="Images/p5.png" alt="Planet 5" />
+            <img className="p-imgs" id="p-img5" src="Images/p5.png" alt="Planet 5" />
           </div>
         </div>
+
+        {/* Help message */}
         <div className="help-us-land-the-rockets">
           Help us Land the Rockets!
         </div>
+
+        {/* Rockets section */}
         <div className="rockets">
+          {/* Individual rocket containers with click handlers */}
           <div className="r-container" id="r1" onClick={() => this.handleRocketClick("r1")}>
             <img className="r-imgs" id="r-img1" src="Images/r1.png" alt="Rocket 1" />
           </div>
@@ -101,7 +121,8 @@ class App extends React.Component {
         </div>
       </div>
     );
-  }
+}
 }
 
+// Render the App component to the element with the id "main-page"
 ReactDOM.render(<App />, document.querySelector("#main-page"));

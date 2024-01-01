@@ -1,23 +1,43 @@
+// Array to store different bubble classes
 let bubbles = ['one', 'two', 'three', 'four', 'five'];
+
+// Get the width of the window
 let windowWidth = window.innerWidth;
+
+// Reference to the body element
 let body = document.body;
+
+// Get the height of the window
 let windowHeight = window.innerHeight;
+
+// Select all elements with the class 'score'
 let scores = document.querySelectorAll('.score');
+
+// Counter for popped bubbles
 let noPop = 0;
+
+// Total number of bubbles
 let total = 50;
+
+// Counter for the current bubble
 let currentBubble = 0;
+
+// Flag to determine if the game is over
 let gameOver = false;
+
+// Reference to the shadow element
 let shadow = document.querySelector('.shadow');
+
+// Reference to the start button
 let startBtn = document.querySelector('.start-btn');
 
-
-
-const openArena=()=>{
-    // document.getElementById("scoref").placeholder-=0
+// Function to open the game arena
+const openArena = () => {
     var arenaRoute = "/arena";
     window.location.href = arenaRoute;
 }
 
+// Function to create a new bubble
 function createBubble() {
     let div = document.createElement('div');
     let rand = Math.floor(Math.random() * bubbles.length);
@@ -30,11 +50,10 @@ function createBubble() {
 
     document.body.appendChild(div);
 
-
     animateBubble(div);
-
 }
 
+// Function to animate the bubble's movement
 function animateBubble(elem) {
     let position = 0;
     let random = Math.floor(Math.random() * 6 - 3);
@@ -49,21 +68,23 @@ function animateBubble(elem) {
             elem.style.top = windowHeight - position + 'px';
         }
     }
-
 }
 
+// Function to delete a popped bubble
 function deleteBubble(elem) {
     elem.remove();
     noPop++;
     scoreUpdate();
 }
 
+// Function to update the displayed score
 function scoreUpdate() {
     for (let i = 0; i < scores.length; i++) {
         scores[i].textContent = noPop;
     }
 }
 
+// Function to start the game
 function startGame() {
     restartGame();
     let timeout = 0;
@@ -83,6 +104,7 @@ function startGame() {
     }, 1800 + timeout);
 }
 
+// Function to restart the game
 function restartGame() {
     let forRemoving = document.querySelectorAll('.bubble');
     for (let i = 0; i < forRemoving.length; i++) {
@@ -92,20 +114,28 @@ function restartGame() {
     noPop = 0;
     scoreUpdate();
 }
+
+// Event listener for bubble popping
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('bubble')) {
         deleteBubble(event.target);
     }
-})
+});
+
+// Event listener for the restart button
 document.querySelector('.restart').addEventListener('click', function () {
     shadow.style.display = 'none';
     shadow.querySelector('.winner').style.display = 'none';
     shadow.querySelector('.loser').style.display = 'none';
     startGame();
 });
+
+// Event listener for the cancel button
 document.querySelector('.cancel').addEventListener('click', function () {
     shadow.style.display = 'none';
 });
+
+// Event listener for the start button
 startBtn.addEventListener('click', function () {
     startGame();
     document.querySelector('.main-game').style.display = 'none';

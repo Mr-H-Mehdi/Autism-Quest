@@ -1,40 +1,50 @@
 const { useState, useEffect } = React;
 
-var score=0
-const incScore=()=>{
-    // document.getElementById("scoref").placeholder-=0
-    score+=10
-    document.getElementById("scoref").placeholder=score
-}
+// Initialize score
+var score = 0;
 
-const openArena=()=>{
-    // document.getElementById("scoref").placeholder-=0
+// Function to increase the score
+const incScore = () => {
+    score += 10;
+    document.getElementById("scoref").placeholder = score;
+};
+
+// Function to open the game arena
+const openArena = () => {
     var arenaRoute = "/arena";
     window.location.href = arenaRoute;
-}
+};
 
-
+// Main App component
 const App = () => {
+    // Array of emotions
     const emotions = ["Angry", "Happy", "Crying", "Laughing", "Sad"];
+
+    // State for selected emotion
     const [selectedEmotion, setSelectedEmotion] = useState(null);
+
+    // State for shuffled images
     const [shuffledImages, setShuffledImages] = useState([]);
+
+    // State for the target emotion
     const [targetEmotion, setTargetEmotion] = useState('');
 
+    // Effect to shuffle images and choose target emotion when selectedEmotion changes
     useEffect(() => {
         shuffleImages();
         chooseTargetEmotion();
-    }, [selectedEmotion]); // Trigger effect when selectedEmotion changes
+    }, [selectedEmotion]);
 
+    // Function to shuffle images
     const shuffleImages = () => {
-        // Replace 'image1', 'image2', etc. with actual image paths
         const imageIds = ["Angry", "Happy", "Crying", "Laughing", "Sad"];
         const shuffledIds = imageIds.sort(() => Math.random() - 0.5);
         setShuffledImages(shuffledIds);
     };
 
+    // Function to choose a target emotion
     const chooseTargetEmotion = () => {
-        // Randomly choose one emotion from the array
-        let randomEmotion = targetEmotion; // Initialize with the current target emotion
+        let randomEmotion = targetEmotion;
         while (randomEmotion === targetEmotion) {
             const randomIndex = Math.floor(Math.random() * emotions.length);
             randomEmotion = emotions[randomIndex];
@@ -42,6 +52,7 @@ const App = () => {
         setTargetEmotion(randomEmotion);
     };
 
+    // Function to handle emotion click
     const handleEmotionClick = (emotion) => {
         if (targetEmotion === null) {
             alert("Please wait for the target emotion to be chosen!");
@@ -51,24 +62,23 @@ const App = () => {
         if (emotion === targetEmotion) {
             alert("You selected the target emotion!");
             incScore();
-            chooseTargetEmotion(); // Change the target emotion
+            chooseTargetEmotion();
             shuffleImages();
         } else {
             alert("Oops! Try again.");
-            // alert(emotion);
-
         }
 
-        // Reset the selected emotion
         setSelectedEmotion(null);
     };
 
     return (
         <div className="app">
+            {/* Display the target emotion */}
             <h2 id="emot-container">
                 {targetEmotion ? `Select the ${targetEmotion} planet` : ''}
             </h2>
 
+            {/* Display shuffled images */}
             <div id="container">
                 {shuffledImages.map((imageId, index) => (
                     <img
@@ -81,12 +91,9 @@ const App = () => {
                     />
                 ))}
             </div>
-
         </div>
     );
 };
 
-// ...
-
-
+// Render the App component
 ReactDOM.render(<App />, document.getElementById("app-container"));
