@@ -2,26 +2,13 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/userStories.css') }}">
-<style>
-    footer{
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-    }
-    #test:hover {
-    background-color: #5bc0de;
-    color: white;
-}
-</style>
     <div class="container">
         @if(count($stories) > 0)
             <div class="row">
                 @foreach($stories as $story)
                     <div class="col-md-4 mb-4 mt-4">
                         <div class="card h-100">
-                            <img src="{{$story->image ? asset('storage/'.$story->image):asset('/images/userStory.jpg')}}" class="card-img-left" alt="{{ $story->title }}">
+                            <img src="{{$story->image ? asset('storage/'.$story->image):asset('/images/userStory.jpg')}}" class="card-img-left vh-50" alt="{{ $story->title }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $story->title }}</h5>
                                 <p class="card-text">{{ $story->story }}</p>

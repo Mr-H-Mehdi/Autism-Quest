@@ -71,7 +71,6 @@ class resourceController extends Controller
         $request->validate([
             'type' => 'required',
             'name' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'description' => 'required|max:100',
             'location' => 'required',
             'contact' => 'required',

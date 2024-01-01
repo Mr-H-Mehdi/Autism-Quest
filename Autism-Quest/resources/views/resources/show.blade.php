@@ -15,7 +15,7 @@
             @foreach($hospitals->take(3) as $hospital)
             <div class="col-md-4 mt-4">
                     <div class="card mb-4  h-100 bg-white">
-                        <img src="{{$hospital->image ? asset('storage/'.$hospital->image):asset('/images/hospital.jpg')}}" class="card-img-left" alt="{{ $hospital->title }}">
+                        <img src="{{$hospital->image ? asset('storage/'.$hospital->image):asset('/images/hospital.jpg')}}" class="card-img-left vh-50" alt="{{ $hospital->title }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $hospital->name }}</h5>
                             <p class="card-text">{{ $hospital->description }}</p>
@@ -46,7 +46,7 @@
             @foreach($educationalInstitutes->take(3) as $institute)
             <div class="col-md-4 mt-4">
                     <div class="card mb-4  h-100 bg-white">
-                        <img src="{{$institute->image ? asset('storage/'.$institute->image):asset('/images/school.jpg')}}" class="card-img-left" alt="{{ $institute->title }}">
+                        <img src="{{$institute->image ? asset('storage/'.$institute->image):asset('/images/school.jpg')}}" class="card-img-left vh-50" alt="{{ $institute->title }}">
                         <div class="card-body">
                             <h5 class="card-title">{{ $institute->name }}</h5>
                             <p class="card-text">{{ $institute->description }}</p>

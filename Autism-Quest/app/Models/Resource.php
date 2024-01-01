@@ -16,5 +16,6 @@ class Resource extends Model
         'location',
         'contact',
         'email',
+        'image'
     ];
 }

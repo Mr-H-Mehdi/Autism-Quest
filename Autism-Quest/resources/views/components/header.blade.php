@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <!-- Add your custom stylesheets if needed -->
+
     <title>Autism Quest</title>
     <style>
         /* Custom style to resize the logo in the navbar */
         .navbar-brand img {
-            height: 50px; /* Adjust the height as needed */
+            height: 50px;
             width:90px;
         }
     
         a {
-            text-decoration: none; /* Remove underline from the link */
+            text-decoration: none;
         }
     </style>
 </head>
