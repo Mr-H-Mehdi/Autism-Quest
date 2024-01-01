@@ -1,47 +1,66 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Set the character set, compatibility, and viewport -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Title of the document -->
     <title>Bubble Popping</title>
+    
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
+    <!-- Header section -->
     <header>
       <nav>
+          <!-- Back button with inline styling and onclick event -->
           <button id="button-nav" style="float:left; color:rgb(207, 231, 146);" onclick="openArena()" class="back"><strong>
             Back
           </strong>
         </button>
-        <h2 >You Popped <span class="score"> 0 </span> Bubbles</h2>
+        
+        <!-- Heading displaying the score -->
+        <h2>You Popped <span class="score"> 0 </span> Bubbles</h2>
       </nav>
-  </header>
+    </header>
 
-    <!---<div class="bubble bubble-one"></div>-->
-
+    <!-- Shadow overlay for game outcomes -->
     <div class="shadow">
       <div class="total-score">
+        
+        <!-- Winner outcome wrapper -->
         <div class="wrapper winner">
           <h4>Congratulations</h4>
           <h4>You Popped all 50 bubbles</h4>
           <p>You are a Winner!</p>
         </div>
+        
+        <!-- Loser outcome wrapper -->
         <div class="wrapper loser">
           <h4>Sorry</h4>
           <h4>You Popped<span class="score"> 0 </span>Bubbles</h4>
           <p>Play Again?</p>
+          
+          <!-- Restart and cancel buttons for the loser outcome -->
           <button class="restart">Yes</button>
           <button class="cancel">No</button>
         </div>
       </div>
     </div>
+    
+    <!-- Main game section -->
     <div class="main-game">
       <h2>Ready to Start?</h2>
+      
+      <!-- Start button to initiate the game -->
       <button class="start-btn">Start</button>
     </div>
 
+    <!-- Include the JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>
